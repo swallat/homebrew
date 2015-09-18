@@ -30,14 +30,12 @@ class Qt5 < Formula
     # when this formula is updated to 5.5.1
     patch :DATA
 
-    # Upstream commit to fix the fatal build error on OS X El Capitan.
+    # Upstream commit to fix the fatal build error with Xcode 7.
     # https://codereview.qt-project.org/#/c/121545/
     # Should land in the 5.5.1 release.
-    if MacOS.version >= :el_capitan
-      patch do
-        url "https://raw.githubusercontent.com/DomT4/scripts/2107043e8/Homebrew_Resources/Qt5/qt5_el_capitan.diff"
-        sha256 "bd8fd054247ec730f60778e210d58cba613265e5df04ec93f4110421fb03b14a"
-      end
+    patch do
+      url "https://raw.githubusercontent.com/DomT4/scripts/2107043e8/Homebrew_Resources/Qt5/qt5_el_capitan.diff"
+      sha256 "bd8fd054247ec730f60778e210d58cba613265e5df04ec93f4110421fb03b14a"
     end
   end
 
