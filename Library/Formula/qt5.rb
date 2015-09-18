@@ -44,6 +44,13 @@ class Qt5 < Formula
       url "https://raw.githubusercontent.com/Homebrew/patches/2fcc1f8ec1df1c90785f4fa6632cebac68772fa9/qt5/el-capitan-2.diff"
       sha256 "b8f04efd047eeed7cfd15b029ece20b5fe3c0960b74f7a5cb98bd36475463227"
     end
+
+    # Upstream fix for CGEventCreateMouseEvent error with 10.11 SDK (Xcode 7).
+    # https://codereview.qt-project.org/#/c/115138/
+    patch do
+      url "https://gist.githubusercontent.com/UniqMartin/baf089e326f572150971/raw/1de52d53929bc3472cc7f345c16f068c37c75263/qtbug-47641.patch"
+      sha256 "c74c73b2d540788f0be2f1f137d0844feca8f5022a044851366380bf2972ead0"
+    end
   end
 
   bottle do
