@@ -51,6 +51,13 @@ class Qt5 < Formula
       url "https://gist.githubusercontent.com/UniqMartin/baf089e326f572150971/raw/1de52d53929bc3472cc7f345c16f068c37c75263/qtbug-47641.patch"
       sha256 "c74c73b2d540788f0be2f1f137d0844feca8f5022a044851366380bf2972ead0"
     end
+
+    # Upstream fix for QNSView on OS X Tool Tip transparent.
+    # https://codereview.qt-project.org/#/c/124274/
+    patch do
+      url "https://gist.github.com/swallat/6b7d10fd929a0087fea4/raw/9b201a2848f8b8e16067855f30588a7b6dc607ec/qt5.5-qnsview-tooltip-cocoa.patch"
+      sha256 "5fa4511ee0c91491358d569f884dad9e4088eafa329e7dbe2b38a62afeef899d"
+    end
   end
 
   bottle do
